@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>cart</title>
+  </head>
+  <body>
+    <div
+      class="navbar bg-custom-black flex justify-between px-10 md:px-14 py-8 mb-5"
+    >
+      <a href="index.html">
+        <h2 class="capitalize font-bold text-xl sm:text-2xl text-white">
+          clothing store
+        </h2>
+      </a>
+      <!-- <a
+        href="./cart.html"
+        class="cart cursor-pointer flex relative max-sm:w-10"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="#fff"
+          class="bi bi-cart3 mr-4 w-9 h-9"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+          />
+        </svg>
+        <div
+          id="cartAmount"
+          class="bg-[#dee2e6] rounded-full absolute md:w-6 md:h-6 w-5 h-5 -top-2 right-0 flex justify-center items-center"
+        >
+          0
+        </div>
+      </a> -->
+    </div>
+    <div class="p-10 mx-10">
+      <h3 class="text-2xl font-bold text-[#495057] mb-4">
+        Your Cart ( <span id="num-of-order">0</span> )
+      </h3>
+      <div class="flex space-x-10">
+        <div id="current-orders" class="w-1/2">
+          <ul
+            class="flex flex-col space-y-3 border border-[#6c757d] rounded-lg p-5 scroll-smooth"
+          >
+            <li
+              class="flex justify-between overflow-hidden border-b border-[#ced4da] pb-3"
+            >
+              <div class="flex space-x-4">
+                <img src="/assets/images/img-11.png" width="100" alt="" />
+                <div class="flex flex-col space-y-2">
+                  <div class="flex items-center space-x-3">
+                    <span id="nameProduct" class="font-bold text-xl">ssss</span>
+                    <span
+                      class="text-white w-fit h-[23px] px-2 rounded-lg bg-[#212529]"
+                      >$10</span
+                    >
+                  </div>
+                  <div id="butns-quantity" class="space-x-1">
+                    <button id="decremment">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-dash-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"
+                        />
+                      </svg>
+                    </button>
+                    <span id="" class="qauntity text-[18px]">3</span>
+                    <button id="increment">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-plus-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <span id="t-price-order" class="font-bold text-lg">$135</span>
+                </div>
+              </div>
+              <button id="close" class="">
+                <svg
+                  class="w-8 h-8"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m6.4 18.308l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.6 5.6l5.6-5.6l.708.708l-5.6 5.6l5.6 5.6l-.708.708l-5.6-5.6l-5.6 5.6Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li
+              class="flex justify-between overflow-hidden border-b border-[#ced4da] pb-3"
+            >
+              <div class="flex space-x-4">
+                <img src="/assets/images/img-11.png" width="100" alt="" />
+                <div class="flex flex-col space-y-2">
+                  <div class="flex items-center space-x-3">
+                    <span id="nameProduct" class="font-bold text-xl">ssss</span>
+                    <span
+                      class="text-white w-fit h-[23px] px-2 rounded-lg bg-[#212529]"
+                      >$10</span
+                    >
+                  </div>
+                  <div id="butns-quantity" class="space-x-1">
+                    <button id="decremment">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-dash-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"
+                        />
+                      </svg>
+                    </button>
+                    <span id="" class="qauntity text-[18px]">3</span>
+                    <button id="increment">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-plus-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <span id="t-price-order" class="font-bold text-lg">$135</span>
+                </div>
+              </div>
+              <button id="close" class="">
+                <svg
+                  class="w-8 h-8"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m6.4 18.308l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.6 5.6l5.6-5.6l.708.708l-5.6 5.6l5.6 5.6l-.708.708l-5.6-5.6l-5.6 5.6Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li
+              class="flex justify-between overflow-hidden border-b border-[#ced4da] pb-3"
+            >
+              <div class="flex space-x-4">
+                <img src="/assets/images/img-11.png" width="100" alt="" />
+                <div class="flex flex-col space-y-2">
+                  <div class="flex items-center space-x-3">
+                    <span id="nameProduct" class="font-bold text-xl">ssss</span>
+                    <span
+                      class="text-white w-fit h-[23px] px-2 rounded-lg bg-[#212529]"
+                      >$10</span
+                    >
+                  </div>
+                  <div id="butns-quantity" class="space-x-1">
+                    <button id="decremment">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-dash-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"
+                        />
+                      </svg>
+                    </button>
+                    <span id="" class="qauntity text-[18px]">3</span>
+                    <button id="increment">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-plus-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <span id="t-price-order" class="font-bold text-lg">$135</span>
+                </div>
+              </div>
+              <button id="close" class="">
+                <svg
+                  class="w-8 h-8"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m6.4 18.308l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.6 5.6l5.6-5.6l.708.708l-5.6 5.6l5.6 5.6l-.708.708l-5.6-5.6l-5.6 5.6Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li
+              class="flex justify-between overflow-hidden border-b border-[#ced4da] pb-3"
+            >
+              <div class="flex space-x-4">
+                <img src="/assets/images/img-11.png" width="100" alt="" />
+                <div class="flex flex-col space-y-2">
+                  <div class="flex items-center space-x-3">
+                    <span id="nameProduct" class="font-bold text-xl">ssss</span>
+                    <span
+                      class="text-white w-fit h-[23px] px-2 rounded-lg bg-[#212529]"
+                      >$10</span
+                    >
+                  </div>
+                  <div id="butns-quantity" class="space-x-1">
+                    <button id="decremment">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-dash-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"
+                        />
+                      </svg>
+                    </button>
+                    <span id="" class="qauntity text-[18px]">3</span>
+                    <button id="increment">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-plus-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <span id="t-price-order" class="font-bold text-lg">$135</span>
+                </div>
+              </div>
+              <button id="close" class="">
+                <svg
+                  class="w-8 h-8"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m6.4 18.308l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.6 5.6l5.6-5.6l.708.708l-5.6 5.6l5.6 5.6l-.708.708l-5.6-5.6l-5.6 5.6Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div id="details-shopping-cart" class="">jsdpfisjaw</div>
+      </div>
+    </div>
+    <script type="module" src="./src/cart.js"></script>
+  </body>
+</html>

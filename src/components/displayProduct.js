@@ -1,5 +1,5 @@
-const showProduct = (product) => {
-  return ` <div id="${product.id}"
+const showProduct = (product, search) => {
+  return ` <div id="product-${product.id}"
         class="item text-left border-[1.5px] border-solid rounded-md border-[#495057] overflow-hidden"
       >
         <img src="/assets/${product.img}" alt="" />
@@ -9,7 +9,9 @@ const showProduct = (product) => {
           <div class="price-quantity flex justify-between">
             <b class="text-xl">$${product.price}</b>
             <div class="buttons flex items-center space-x-2">
-              <button type="button" onclick="decrement()" class="decrement">
+              <button type="button" onclick="decrement(${
+                product.id
+              })" class="decrement">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -24,8 +26,12 @@ const showProduct = (product) => {
                   />
                 </svg>
               </button>
-              <div id=${product.id} class="qauntity text-[18px]">0</div>
-              <button type="button" onclick="increment()" class="increment">
+              <div id=${product.id} class="qauntity text-[18px]">${
+    search.item === undefined ? 0 : search.item
+  }</div>
+              <button type="button" onclick="increment(${
+                product.id
+              })" class="increment">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"

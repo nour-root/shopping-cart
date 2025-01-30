@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
@@ -13,7 +14,7 @@
       <h2 class="capitalize font-bold text-xl sm:text-2xl text-white">
         clothing store
       </h2>
-      <div class="cart cursor-pointer flex relative max-sm:w-10">
+      <a href="cart.html" class="cart cursor-pointer flex relative max-sm:w-10">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="#fff"
@@ -25,11 +26,12 @@
           />
         </svg>
         <div
-          class="cartAmount bg-[#dee2e6] rounded-full absolute md:w-6 md:h-6 w-5 h-5 -top-2 right-0 flex justify-center items-center"
+          id="cartAmount"
+          class="bg-[#dee2e6] rounded-full absolute md:w-6 md:h-6 w-5 h-5 -top-2 right-0 flex justify-center items-center"
         >
           0
         </div>
-      </div>
+      </a>
     </div>
     <div
       class="shop grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 text-center gap-10 p-10"
