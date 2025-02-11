@@ -5,8 +5,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: "index.html",
-        cart: "cart.html",
+        main: "./index.html",
+        cart: "./cart.html",
       },
     },
   },
