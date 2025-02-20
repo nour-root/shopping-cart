@@ -48,8 +48,7 @@ function removeItem(id) {
   localStorage.setItem("data", JSON.stringify(Basket));
 }
 let calculater = () => {
-  let numOfOrders = document.getElementById("num-of-order");
-  numOfOrders.innerHTML = Basket.map((x) => x.item).reduce((x, y) => x + y, 0);
+  label.innerHTML = Basket.map((x) => x.item).reduce((x, y) => x + y, 0);
 };
 let TotalAmount = () => {
   if (Basket.length !== 0) {
